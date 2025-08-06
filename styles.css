@@ -1,58 +1,20 @@
-/* Basic layout */
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
-  margin: 0;
-}
-
-.container {
-  background: #fff;
-  padding: 30px;
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 100%;
-}
-
-#verification_heading {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#verification_subtext {
-  font-size: 14px;
-  margin: 10px 0 20px;
-  color: #555;
-}
-
-.code-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+/*  your css code here. If applicable */
+code-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .code {
-  width: 50px;
-  height: 60px;
-  font-size: 32px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.footer-note {
-  font-size: 12px;
-  color: gray;
-  background-color: #f1f1f1;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
+.code:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

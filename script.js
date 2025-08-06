@@ -1,26 +1,29 @@
-const inputs = document.querySelectorAll('.code');
+//your JS code here. If required.
+const codes = document.querySelectorAll('.code');
 
-// Automatically focus on first input
-inputs[0].focus();
+codes[0].focus();
 
-inputs.forEach((input, index) => {
-  input.addEventListener('input', (e) => {
-    const value = e.target.value;
-    if (value.match(/[0-9]/)) {
-      if (index < inputs.length - 1) {
-        inputs[index + 1].focus();
-      }
-    } else {
-      e.target.value = '';
-    }
-  });
+codes.forEach((code, index) => {
+    code.addEventListener('keydown', (e) => {
+        if (e.key >= 0 && e.key <= 9) {
+            code.value = '';
+            setTimeout(() => {
+                code.value = e.key;
+                if (index < codes.length - 1) {
+                    codes[index + 1].focus();
+                }
+            }, 0);
+        }
 
-  input.addEventListener('keydown', (e) => {
-    if (e.key === 'Backspace') {
-      if (input.value === '' && index > 0) {
-        inputs[index - 1].focus();
-        inputs[index - 1].value = '';
-      }
-    }
-  });
+        if (e.key === 'Backspace') {
+            if (code.value === '') {
+                if (index > 0) {
+                    codes[index - 1].focus();
+                    codes[index - 1].value = '';
+                }
+            } else {
+                code.value = '';
+            }
+        }
+    });
 });
